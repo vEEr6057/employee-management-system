@@ -95,7 +95,7 @@ class Manager(Employee):
         super().__init__(employee_id, name, email, password, role="Manager")
 
 class TaskManager:
-    def __init__(self, mongo_uri: str = "mongodb://localhost:27017/", db_name: str = "employee_management"):
+    def __init__(self, mongo_uri: str = "mongodb://localhost:27017/", db_name: str = "employee_task_db"):
         self.client = MongoClient(mongo_uri)
         self.db = self.client[db_name]
         self.employees_collection = self.db.employees
